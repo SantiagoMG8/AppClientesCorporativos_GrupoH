@@ -13,7 +13,7 @@ namespace AppClientesCorporativos_GrupoH
             LeerSolicitud.Iniciar();
 
             string ingresoNroSolicitud = "";
-            string clienteSesion = ValidarUusuarios.nombreEmpresaSesionList[0];
+            string clienteSesion = ValidarUsuarios.nombreEmpresaSesionList[0];
             bool coincideNro = false;
 
             while (true)

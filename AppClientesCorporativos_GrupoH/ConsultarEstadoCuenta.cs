@@ -11,7 +11,7 @@ namespace AppClientesCorporativos_GrupoH
         internal static void Iniciar()
         {
             LeerFacturas.Iniciar();
-            string cuit = ValidarUusuarios.cuitSesionList[0];
+            string cuit = ValidarUsuarios.cuitSesionList[0];
             decimal saldo = 0M;
             bool coincidecuit = false;
             Console.WriteLine("Listado completo de sus facturas: ");

@@ -22,7 +22,7 @@ namespace AppClientesCorporativos_GrupoH
                 DateTime fecha = DateTime.Now;
 
                 //Establece el cliente que hace la solicitud
-                string cliente = ValidarUusuarios.nombreEmpresaSesionList[0];
+                string cliente = ValidarUsuarios.nombreEmpresaSesionList[0];
 
 
                 string estado = "INICIADA"; //EL ESTADO SERA ACTUALIZADO POR UNA APLICACION LOGISTICA EXTERNA A ESTA APLICACION

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppClientesCorporativos_GrupoH
 {
-    internal class ValidarUusuarios
+    internal class ValidarUsuarios
     {
         public static List<string> cuitSesionList = new List<string>();
         public static List<string> nombreEmpresaSesionList = new List<string>();
