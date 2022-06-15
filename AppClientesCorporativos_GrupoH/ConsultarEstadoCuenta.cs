@@ -36,7 +36,7 @@ namespace AppClientesCorporativos_GrupoH
 
             if (coincidecuit == false)
             {
-                Console.WriteLine("No existen facturas asociadas a su CUIT actualmente");
+                Console.WriteLine("No existen facturas asociadas a su CUIT actualmente.");
             }
 
             if (coincidecuit == true)

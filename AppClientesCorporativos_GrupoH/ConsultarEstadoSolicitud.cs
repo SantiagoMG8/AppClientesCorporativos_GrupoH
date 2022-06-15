@@ -24,7 +24,7 @@ namespace AppClientesCorporativos_GrupoH
 
                 if (string.IsNullOrWhiteSpace(ingresoNroSolicitud))
                 {
-                    Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un Nro. de Solicitud");
+                    Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un Nro. de Solicitud.");
                     continue;
                 }
 

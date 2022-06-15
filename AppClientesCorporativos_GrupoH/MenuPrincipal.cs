@@ -21,14 +21,14 @@ namespace AppClientesCorporativos_GrupoH
 
                 if (string.IsNullOrWhiteSpace(ingreso))
                 {
-                    Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 4");
+                    Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 4.");
                     continue;
                 }
 
 
                 if (!int.TryParse(ingreso, out int opcion))
                 {
-                    Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 4");
+                    Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 4.");
                     continue;
                 }
 

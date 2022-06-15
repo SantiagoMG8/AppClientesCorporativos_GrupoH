@@ -77,7 +77,7 @@ namespace AppClientesCorporativos_GrupoH
                     direccionOrigen = Console.ReadLine();
                     if (string.IsNullOrWhiteSpace(direccionOrigen))
                     {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una dirección de origen");
+                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una dirección de origen.");
                         continue;
                     }
                     break;
@@ -378,7 +378,7 @@ namespace AppClientesCorporativos_GrupoH
                     localidadDestino = Console.ReadLine().ToUpper();
                     if (string.IsNullOrWhiteSpace(localidadDestino))
                     {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una localidad de destino");
+                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una localidad de destino.");
                         continue;
                     }
                     break;
@@ -536,7 +536,7 @@ namespace AppClientesCorporativos_GrupoH
                         provinciaDestino = Console.ReadLine();
                         if (string.IsNullOrWhiteSpace(provinciaDestino))
                         {
-                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una provincia de destino");
+                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una provincia de destino.");
                             continue;
                         }
                         break;
@@ -572,7 +572,7 @@ namespace AppClientesCorporativos_GrupoH
                         regionDestino = Console.ReadLine();
                         if (string.IsNullOrWhiteSpace(regionDestino))
                         {
-                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una región de destino");
+                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una región de destino.");
                             continue;
                         }
                         break;
@@ -643,7 +643,7 @@ namespace AppClientesCorporativos_GrupoH
                 while (true)
                 {
                     string ingresoUrgente;
-                    Console.WriteLine("Indique si quiere el servicio urgente o el servicio no urgente");
+                    Console.WriteLine("Indique si quiere el servicio urgente o el servicio no urgente:");
                     Console.WriteLine("1 - Urgente");
                     Console.WriteLine("2 - No Urgente");
                     ingresoUrgente = Console.ReadLine();
@@ -716,7 +716,7 @@ namespace AppClientesCorporativos_GrupoH
                 string retiro = "";
                 while (true)
                 {
-                    Console.WriteLine("Indique si el retiro sera por Puerta o por Sucursal");
+                    Console.WriteLine("Indique si el retiro sera por Puerta o por Sucursal:");
                     Console.WriteLine("1 - Puerta");
                     Console.WriteLine("2 - Sucursal");
                     string ingresoRetiro = Console.ReadLine();
