@@ -45,7 +45,7 @@ namespace AppClientesCorporativos_GrupoH
             }
 
             Console.WriteLine(System.Environment.NewLine);
-            Console.WriteLine("Voliendo al menú principal...");
+            Console.WriteLine("Volviendo al menú principal...");
             Console.WriteLine("---------------------------------------------");
             Facturas.FacturaList.Clear();
         }

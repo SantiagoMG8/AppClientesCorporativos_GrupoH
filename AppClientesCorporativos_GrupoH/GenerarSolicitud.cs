@@ -1101,7 +1101,7 @@ namespace AppClientesCorporativos_GrupoH
 
                 //MUESTRA TODOS LOS DATOS QUE VA A TENER LA SOLICITUD Y EL COSTO FINAL
                 Console.WriteLine(System.Environment.NewLine);
-                Console.WriteLine("Datos que de la solicitud a generar: ");
+                Console.WriteLine("Datos de la solicitud a generar: ");
                 Console.WriteLine(System.Environment.NewLine);
                 Console.WriteLine("NroSolicitud: " + nrosolicitud + "; Fecha: " + fecha + "; Cliente: " + cliente + "; Estado: " + estado + "; TipoSolicitud: " + tipoSolicitud + "; DirecciónOrigen: " + direccionOrigen + "; LocalidadOrigen: " + localidadOrigen
                 + "; ProvinciaOrigen: " + provinciaOrigen + "; RegiónOrigen: " + regionOrigen + "; PaísOrigen: " + paisOrigen + "; DirecciónDestino: " + direccionDestino + "; LocalidadDestino: " + localidadDestino
@@ -1180,7 +1180,7 @@ namespace AppClientesCorporativos_GrupoH
 
 
                 Console.WriteLine(System.Environment.NewLine);
-                Console.WriteLine("Voliendo al menú principal...");
+                Console.WriteLine("Volviendo al menú principal...");
                 Console.WriteLine("---------------------------------------------");
                 SolicitudServicio.SolicitudList.Clear();
                 Tarifas.TarifasList.Clear();
