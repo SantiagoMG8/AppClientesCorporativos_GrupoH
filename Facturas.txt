@@ -1,0 +1,7 @@
+FV66000001;04/03/2022 15:42:15;Calzados Gandolfi;30-30780995-4;PENDIENTE;Envio encomienda 5kg urgente provincial (entrega y retiro en puerta);3175.00
+FV66000002;04/04/2022 10:42:05;Calzados Gandolfi;30-30780995-4;PAGADO;Envio correspondencia 0.3kg localidad (entrega y retiro en sucursal);250.00
+FV66000003;04/05/2022 16:10:25;Calzados Gandolfi;30-30780995-4;PENDIENTE;Envio encomienda 12kg urgente nacional (entrega y retiro en puerta);5675.00
+FV66000004;04/06/2022 12:10:35;Calzados Gandolfi;30-30780995-4;PENDIENTE;Envio encomienda 25kg pais limitrofe (entrega y retiro en sucursal);15000.00
+FV79686809;06/12/2022 15:29:15;Laterales S.A.;30-40008884-1;PENDIENTE;Envio correspondencia 0.49kg urgente localidad (entrega en sucursal y retiro en puerta);1112.50
+FV63280197;06/12/2022 16:12:14;Plasticos Bonetto;30-29008882-4;PAGADO;Envio encomienda 30kg urgente pais limitrofe (entrega y retiro en puerta);20050.00
+FV84626840;06/14/2022 03:06:25;Plasticos Bonetto;30-29008882-4;PENDIENTE;Envio encomienda 15kg pais resto sudamerica (entrega y retiro en sucursal);11000.00
