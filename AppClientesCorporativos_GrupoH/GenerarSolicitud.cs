@@ -66,519 +66,6 @@ namespace AppClientesCorporativos_GrupoH
                     break;
                 }
 
-                //Los Servicios siempre se realizan desde Argentina
-                string paisOrigen = "ARGENTINA";
-
-                //LOOPS INGRESO DATOS DE ORIGEN
-                string direccionOrigen = "";
-                while (true)
-                {
-                    Console.WriteLine("Ingrese la dirección de origen (Calle, número y código postal): ");
-                    direccionOrigen = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(direccionOrigen))
-                    {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una dirección de origen.");
-                        continue;
-                    }
-                    break;
-                }
-
-                string localidadOrigen = "";
-                while (true)
-                {
-                    Console.WriteLine("Ingrese la localidad de origen de la dirección: "); ;
-                    localidadOrigen = Console.ReadLine().ToUpper();
-                    if (string.IsNullOrWhiteSpace(localidadOrigen))
-                    {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una localidad de origen");
-                        continue;
-                    }
-                    break;
-                }
-
-                string provinciaOrigen = "";
-                while (true)
-                {
-                    Console.WriteLine("Ingrese la provincia de origen de la dirección: ");
-                    Console.WriteLine("1 - BUENOS AIRES");
-                    Console.WriteLine("2 - CABA");
-                    Console.WriteLine("3 - CATAMARCA");
-                    Console.WriteLine("4 - CHACO");
-                    Console.WriteLine("5 - CHUBUT");
-                    Console.WriteLine("6 - CORDOBA");
-                    Console.WriteLine("7 - CORRIENTES");
-                    Console.WriteLine("8 - ENTRE RIOS");
-                    Console.WriteLine("9 - FORMOSA");
-                    Console.WriteLine("10 - JUJUY");
-                    Console.WriteLine("11 - LA PAMPA");
-                    Console.WriteLine("12 - LA RIOJA");
-                    Console.WriteLine("13 - MENDOZA");
-                    Console.WriteLine("14 - MISIONES");
-                    Console.WriteLine("15 - NEUQUEN");
-                    Console.WriteLine("16 - RIO NEGRO");
-                    Console.WriteLine("17 - SALTA");
-                    Console.WriteLine("18 - SAN JUAN");
-                    Console.WriteLine("19 - LA RIOJA");
-                    Console.WriteLine("20 - SAN LUIS");
-                    Console.WriteLine("21 - SANTA FE");
-                    Console.WriteLine("22 - SANTIAGO DEL ESTERO");
-                    Console.WriteLine("23 - TIERRA DEL FUEGO");
-                    Console.WriteLine("24 - TUCUMAN");
-                    string ingresoprovinciaOrigen = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(ingresoprovinciaOrigen))
-                    {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 24.");
-                        continue;
-                    }
-                    if (!int.TryParse(ingresoprovinciaOrigen, out int intprovinciaOrigen))
-                    {
-                        Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 24.");
-                        continue;
-                    }
-                    if (intprovinciaOrigen == 1)
-                    {
-                        provinciaOrigen = "BUENOS AIRES";
-                    }
-                    else if (intprovinciaOrigen == 2)
-                    {
-                        provinciaOrigen = "CABA";
-                    }
-                    else if (intprovinciaOrigen == 3)
-                    {
-                        provinciaOrigen = "CATAMARCA";
-                    }
-                    else if (intprovinciaOrigen == 4)
-                    {
-                        provinciaOrigen = "CHACO";
-                    }
-                    else if (intprovinciaOrigen == 5)
-                    {
-                        provinciaOrigen = "CHUBUT";
-                    }
-                    else if (intprovinciaOrigen == 6)
-                    {
-                        provinciaOrigen = "CORDOBA";
-                    }
-                    else if (intprovinciaOrigen == 7)
-                    {
-                        provinciaOrigen = "CORRIENTES";
-                    }
-                    else if (intprovinciaOrigen == 8)
-                    {
-                        provinciaOrigen = "ENTRE RIOS";
-                    }
-                    else if (intprovinciaOrigen == 9)
-                    {
-                        provinciaOrigen = "FORMOSA";
-                    }
-                    else if (intprovinciaOrigen == 10)
-                    {
-                        provinciaOrigen = "JUJUY";
-                    }
-                    else if (intprovinciaOrigen == 11)
-                    {
-                        provinciaOrigen = "LA PAMPA";
-                    }
-                    else if (intprovinciaOrigen == 12)
-                    {
-                        provinciaOrigen = "LA RIOJA";
-                    }
-                    else if (intprovinciaOrigen == 13)
-                    {
-                        provinciaOrigen = "MENDOZA";
-                    }
-                    else if (intprovinciaOrigen == 14)
-                    {
-                        provinciaOrigen = "MISIONES";
-                    }
-                    else if (intprovinciaOrigen == 15)
-                    {
-                        provinciaOrigen = "NEUQUEN";
-                    }
-                    else if (intprovinciaOrigen == 16)
-                    {
-                        provinciaOrigen = "RIO NEGRO";
-                    }
-                    else if (intprovinciaOrigen == 17)
-                    {
-                        provinciaOrigen = "SALTA";
-                    }
-                    else if (intprovinciaOrigen == 18)
-                    {
-                        provinciaOrigen = "SAN JUAN";
-                    }
-                    else if (intprovinciaOrigen == 19)
-                    {
-                        provinciaOrigen = "LA RIOJA";
-                    }
-                    else if (intprovinciaOrigen == 20)
-                    {
-                        provinciaOrigen = "SAN LUIS";
-                    }
-                    else if (intprovinciaOrigen == 21)
-                    {
-                        provinciaOrigen = "SANTA FE";
-                    }
-                    else if (intprovinciaOrigen == 22)
-                    {
-                        provinciaOrigen = "SANTIAGO DEL ESTERO";
-                    }
-                    else if (intprovinciaOrigen == 23)
-                    {
-                        provinciaOrigen = "TIERRA DEL FUEGO";
-                    }
-                    else if (intprovinciaOrigen == 24)
-                    {
-                        provinciaOrigen = "TUCUMAN";
-                    }
-                    else
-                    {
-                        Console.WriteLine("Usted debe ingresar un número entero del 1 al 24.");
-                        continue;
-                    }
-
-                    break;
-
-                }
-
-
-
-                //ESTABLECEMOS REGION SEGUN PROVINCIA
-                string regionOrigen = "";
-                if (provinciaOrigen == "BUENOS AIRES" || provinciaOrigen == "CABA")
-                {
-                    regionOrigen = "METROPOLITANA";
-                }
-                if (provinciaOrigen == "TIERRA DEL FUEGO" || provinciaOrigen == "SANTA CRUZ" || provinciaOrigen == "CHUBUT" || provinciaOrigen == "RIO NEGRO" || provinciaOrigen == "NEUQUEN")
-                {
-                    regionOrigen = "SUR";
-                }
-                if (provinciaOrigen == "LA PAMPA" || provinciaOrigen == "SAN LUIS" || provinciaOrigen == "MENDOZA" || provinciaOrigen == "CORDOBA" || provinciaOrigen == "SANTA FE")
-                {
-                    regionOrigen = "CENTRO";
-                }
-                if (provinciaOrigen == "ENTRE RIOS" || provinciaOrigen == "CORRIENTES" || provinciaOrigen == "MISIONES" || provinciaOrigen == "CHACO" || provinciaOrigen == "FORMOSA" || provinciaOrigen == "SANTIAGO DEL ESTERO" || provinciaOrigen == "TUCUMAN" || provinciaOrigen == "SALTA" || provinciaOrigen == "JUJUY" || provinciaOrigen == "CATAMARCA" || provinciaOrigen == "LA RIOJA" || provinciaOrigen == "SAN JUAN")
-                {
-                    regionOrigen = "NORTE";
-                }
-
-
-                //LOOPS INGRESO DATOS DE DESTINO
-                string paisDestino = "";
-                while (true)
-                {
-                    Console.WriteLine("Ingrese el pais de destino de la dirección: ");
-                    Console.WriteLine("1 - ARGENTINA");
-                    Console.WriteLine("2 - BRASIL");
-                    Console.WriteLine("3 - URUGUAY");
-                    Console.WriteLine("4 - BOLIVIA");
-                    Console.WriteLine("5 - CHILE");
-                    Console.WriteLine("6 - PARAGUAY");
-                    Console.WriteLine("7 - COLOMBIA");
-                    Console.WriteLine("8 - PERU");
-                    Console.WriteLine("9 - ECUADOR");
-                    Console.WriteLine("10 - VENEZUELA");
-                    Console.WriteLine("11 - GUYANA");
-                    Console.WriteLine("12 - SURINAM");
-                    Console.WriteLine("13 - TRINIDAD Y TOBAGO");
-                    Console.WriteLine("14 - GUAYANA FRANCESA");
-                    string ingresopaisDestino = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(ingresopaisDestino))
-                    {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 14.");
-                        continue;
-                    }
-                    if (!int.TryParse(ingresopaisDestino, out int intpaisDestino))
-                    {
-                        Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 14.");
-                        continue;
-                    }
-                    if (intpaisDestino == 1)
-                    {
-                        paisDestino = "ARGENTINA";
-                    }
-                    else if (intpaisDestino == 2)
-                    {
-                        paisDestino = "BRASIL";
-                    }
-                    else if (intpaisDestino == 3)
-                    {
-                        paisDestino = "URUGUAY";
-                    }
-                    else if (intpaisDestino == 4)
-                    {
-                        paisDestino = "BOLIVIA";
-                    }
-                    else if (intpaisDestino == 5)
-                    {
-                        paisDestino = "CHILE";
-                    }
-                    else if (intpaisDestino == 6)
-                    {
-                        paisDestino = "PARAGUAY";
-                    }
-                    else if (intpaisDestino == 7)
-                    {
-                        paisDestino = "COLOMBIA";
-                    }
-                    else if (intpaisDestino == 8)
-                    {
-                        paisDestino = "PERU";
-                    }
-                    else if (intpaisDestino == 9)
-                    {
-                        paisDestino = "ECUADOR";
-                    }
-                    else if (intpaisDestino == 10)
-                    {
-                        paisDestino = "VENEZUELA";
-                    }
-                    else if (intpaisDestino == 11)
-                    {
-                        paisDestino = "GUYANA";
-                    }
-                    else if (intpaisDestino == 12)
-                    {
-                        paisDestino = "SURINAM";
-                    }
-                    else if (intpaisDestino == 13)
-                    {
-                        paisDestino = "TRINIDAD Y TOBAGO";
-                    }
-                    else if (intpaisDestino == 14)
-                    {
-                        paisDestino = "GUAYANA FRANCESA";
-                    }
-                    else
-                    {
-                        Console.WriteLine("Usted debe ingresar un número entero del 1 al 14.");
-                        continue;
-                    }
-
-                    break;
-                }
-
-                string direccionDestino = "";
-                while (true)
-                {
-                    Console.WriteLine("Ingrese dirección de destino (Calle, número y código postal): ");
-                    direccionDestino = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(direccionDestino))
-                    {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una dirección de destino");
-                        continue;
-                    }
-                    break;
-                }
-
-                string localidadDestino = "";
-                while (true)
-                {
-                    Console.WriteLine("Ingrese la localidad de destino de la dirección: "); ;
-                    localidadDestino = Console.ReadLine().ToUpper();
-                    if (string.IsNullOrWhiteSpace(localidadDestino))
-                    {
-                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una localidad de destino.");
-                        continue;
-                    }
-                    break;
-                }
-
-                string provinciaDestino = "";
-                while (true)
-                {
-                    if (paisDestino == "ARGENTINA")
-                    {
-                        Console.WriteLine("Ingrese la provincia de destino de la dirección: ");
-                        Console.WriteLine("1 - BUENOS AIRES");
-                        Console.WriteLine("2 - CABA");
-                        Console.WriteLine("3 - CATAMARCA");
-                        Console.WriteLine("4 - CHACO");
-                        Console.WriteLine("5 - CHUBUT");
-                        Console.WriteLine("6 - CORDOBA");
-                        Console.WriteLine("7 - CORRIENTES");
-                        Console.WriteLine("8 - ENTRE RIOS");
-                        Console.WriteLine("9 - FORMOSA");
-                        Console.WriteLine("10 - JUJUY");
-                        Console.WriteLine("11 - LA PAMPA");
-                        Console.WriteLine("12 - LA RIOJA");
-                        Console.WriteLine("13 - MENDOZA");
-                        Console.WriteLine("14 - MISIONES");
-                        Console.WriteLine("15 - NEUQUEN");
-                        Console.WriteLine("16 - RIO NEGRO");
-                        Console.WriteLine("17 - SALTA");
-                        Console.WriteLine("18 - SAN JUAN");
-                        Console.WriteLine("19 - LA RIOJA");
-                        Console.WriteLine("20 - SAN LUIS");
-                        Console.WriteLine("21 - SANTA FE");
-                        Console.WriteLine("22 - SANTIAGO DEL ESTERO");
-                        Console.WriteLine("23 - TIERRA DEL FUEGO");
-                        Console.WriteLine("24 - TUCUMAN");
-                        string ingresoprovinciaDestino = Console.ReadLine();
-                        if (string.IsNullOrWhiteSpace(ingresoprovinciaDestino))
-                        {
-                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 24.");
-                            continue;
-                        }
-                        if (!int.TryParse(ingresoprovinciaDestino, out int intprovinciaDestino))
-                        {
-                            Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 24.");
-                            continue;
-                        }
-                        if (intprovinciaDestino == 1)
-                        {
-                            provinciaDestino = "BUENOS AIRES";
-                        }
-                        else if (intprovinciaDestino == 2)
-                        {
-                            provinciaDestino = "CABA";
-                        }
-                        else if (intprovinciaDestino == 3)
-                        {
-                            provinciaDestino = "CATAMARCA";
-                        }
-                        else if (intprovinciaDestino == 4)
-                        {
-                            provinciaDestino = "CHACO";
-                        }
-                        else if (intprovinciaDestino == 5)
-                        {
-                            provinciaDestino = "CHUBUT";
-                        }
-                        else if (intprovinciaDestino == 6)
-                        {
-                            provinciaDestino = "CORDOBA";
-                        }
-                        else if (intprovinciaDestino == 7)
-                        {
-                            provinciaDestino = "CORRIENTES";
-                        }
-                        else if (intprovinciaDestino == 8)
-                        {
-                            provinciaDestino = "ENTRE RIOS";
-                        }
-                        else if (intprovinciaDestino == 9)
-                        {
-                            provinciaDestino = "FORMOSA";
-                        }
-                        else if (intprovinciaDestino == 10)
-                        {
-                            provinciaDestino = "JUJUY";
-                        }
-                        else if (intprovinciaDestino == 11)
-                        {
-                            provinciaDestino = "LA PAMPA";
-                        }
-                        else if (intprovinciaDestino == 12)
-                        {
-                            provinciaDestino = "LA RIOJA";
-                        }
-                        else if (intprovinciaDestino == 13)
-                        {
-                            provinciaDestino = "MENDOZA";
-                        }
-                        else if (intprovinciaDestino == 14)
-                        {
-                            provinciaDestino = "MISIONES";
-                        }
-                        else if (intprovinciaDestino == 15)
-                        {
-                            provinciaDestino = "NEUQUEN";
-                        }
-                        else if (intprovinciaDestino == 16)
-                        {
-                            provinciaDestino = "RIO NEGRO";
-                        }
-                        else if (intprovinciaDestino == 17)
-                        {
-                            provinciaDestino = "SALTA";
-                        }
-                        else if (intprovinciaDestino == 18)
-                        {
-                            provinciaDestino = "SAN JUAN";
-                        }
-                        else if (intprovinciaDestino == 19)
-                        {
-                            provinciaDestino = "LA RIOJA";
-                        }
-                        else if (intprovinciaDestino == 20)
-                        {
-                            provinciaDestino = "SAN LUIS";
-                        }
-                        else if (intprovinciaDestino == 21)
-                        {
-                            provinciaDestino = "SANTA FE";
-                        }
-                        else if (intprovinciaDestino == 22)
-                        {
-                            provinciaDestino = "SANTIAGO DEL ESTERO";
-                        }
-                        else if (intprovinciaDestino == 23)
-                        {
-                            provinciaDestino = "TIERRA DEL FUEGO";
-                        }
-                        else if (intprovinciaDestino == 24)
-                        {
-                            provinciaDestino = "TUCUMAN";
-                        }
-                        else
-                        {
-                            Console.WriteLine("Usted debe ingresar un número entero del 1 al 24.");
-                            continue;
-                        }
-
-                        break;
-                    }
-                    else
-                    {
-                        
-                        Console.WriteLine("Ingrese la provincia de destino de la dirección: ");
-                        provinciaDestino = Console.ReadLine();
-                        if (string.IsNullOrWhiteSpace(provinciaDestino))
-                        {
-                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una provincia de destino.");
-                            continue;
-                        }
-                        break;
-                    }
-                }
-
-                string regionDestino = "";
-                //SI EL PAÍS DE DESTINO ES ARGENTINA, ESTABLECEMOS REGION SEGUN PROVINCIA
-                if (paisDestino == "ARGENTINA")
-                {
-                    if (provinciaDestino == "BUENOS AIRES" || provinciaDestino == "CABA")
-                    {
-                        regionDestino = "METROPOLITANA";
-                    }
-                    if (provinciaDestino == "TIERRA DEL FUEGO" || provinciaDestino == "SANTA CRUZ" || provinciaDestino == "CHUBUT" || provinciaDestino == "RIO NEGRO" || provinciaDestino == "NEUQUEN")
-                    {
-                        regionDestino = "SUR";
-                    }
-                    if (provinciaDestino == "LA PAMPA" || provinciaDestino == "SAN LUIS" || provinciaDestino == "MENDOZA" || provinciaDestino == "CORDOBA" || provinciaDestino == "SANTA FE")
-                    {
-                        regionDestino = "CENTRO";
-                    }
-                    if (provinciaDestino == "ENTRE RIOS" || provinciaDestino == "CORRIENTES" || provinciaDestino == "MISIONES" || provinciaDestino == "CHACO" || provinciaDestino == "FORMOSA" || provinciaDestino == "SANTIAGO DEL ESTERO" || provinciaDestino == "TUCUMAN" || provinciaDestino == "SALTA" || provinciaDestino == "JUJUY" || provinciaDestino == "CATAMARCA" || provinciaDestino == "LA RIOJA" || provinciaDestino == "SAN JUAN")
-                    {
-                        regionDestino = "NORTE";
-                    }
-                }
-                else
-                {
-                    while (true)
-                    {
-                        Console.WriteLine("Ingrese la región de destino de la dirección: "); ;
-                        regionDestino = Console.ReadLine();
-                        if (string.IsNullOrWhiteSpace(regionDestino))
-                        {
-                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una región de destino.");
-                            continue;
-                        }
-                        break;
-                    }
-                }
-
 
                 //VALIDADOR PESO
                 decimal peso = 0M;
@@ -638,6 +125,7 @@ namespace AppClientesCorporativos_GrupoH
                     break;
                 }
 
+
                 //VALIDADOR INGRESO URGENTE
                 string urgente = "";
                 while (true)
@@ -674,6 +162,7 @@ namespace AppClientesCorporativos_GrupoH
 
                     break;
                 }
+
 
                 //VALIDADOR INGRESO ENTREGA
                 string entrega = "";
@@ -712,6 +201,7 @@ namespace AppClientesCorporativos_GrupoH
 
                 }
 
+
                 //VALIDADOR INGRESO RETIRO
                 string retiro = "";
                 while (true)
@@ -749,327 +239,343 @@ namespace AppClientesCorporativos_GrupoH
 
                 }
 
-                //CALCULO COSTO TARIFA EN BASE AL PESO INGRESADO y DATOS ORIGEN-DESTINO.
-                decimal costosubtotal = 0M;
-                LeerTarifas.Iniciar();
 
-                if (peso > 20M)
+                //Se inician las funciones de lectura de los maestros de paises, provincias y localidades
+                LeerPais.Iniciar();
+                LeerProvincia.Iniciar();
+                LeerLocalidad.Iniciar();
+
+                //Los Servicios siempre se realizan desde Argentina
+                //LOOPS INGRESO DATOS DE ORIGEN
+                //DETERMINACIÓN DE DIRECCIÓN DE ORIGEN
+                string direccionOrigen = "";
+                while (true)
                 {
-                    if (paisOrigen == paisDestino)
+                    Console.WriteLine("Ingrese la dirección de origen (Calle, número y código postal): ");
+                    direccionOrigen = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(direccionOrigen))
                     {
-                        if (regionOrigen == regionDestino)
-                        {
-                            if (provinciaOrigen == provinciaDestino)
-                            {
-                                if (localidadOrigen == localidadDestino)
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "30kglocalidad") //Coloca tarifa "Hasta 30 Kg para misma localidad"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "30kgprovincia") //Coloca tarifa "Hasta 30 Kg para misma provincia"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                {
-                                    if (tarifa.Nombre == "30kgregional") //Coloca tarifa "Hasta 30 Kg para misma región"
-                                    {
-                                        costosubtotal = tarifa.Precio;
-                                    }
-                                }
-                            }
-                        }
-
-                        else
-                        {
-                            foreach (Tarifas tarifa in Tarifas.TarifasList)
-                            {
-                                if (tarifa.Nombre == "30kgnacional") //Coloca tarifa "Hasta 30 Kg para mismo país"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-                        }
-
+                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una dirección de origen.");
+                        continue;
                     }
-                    else
-                    {
-                        foreach (Tarifas tarifa in Tarifas.TarifasList)
-                        {
-                            if (paisDestino == "BRASIL" || paisDestino == "URUGUAY" || paisDestino == "BOLIVIA" || paisDestino == "CHILE" || paisDestino == "PARAGUAY")
-                            {
-                                if (tarifa.Nombre == "30kgpaislimitrofe") //Coloca tarifa "Hasta 30 Kg para pais limitrofe"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                            if (paisDestino == "COLOMBIA" || paisDestino == "PERU" || paisDestino == "ECUADOR" || paisDestino == "VENEZUELA" || paisDestino == "GUYANA" || paisDestino == "SURINAM" || paisDestino == "TRINIDAD Y TOBAGO" || paisDestino == "GUAYANA FRANCESA")
-                            {
-                                if (tarifa.Nombre == "30kgpaissudamerica") //Coloca tarifa "Hasta 30 Kg para pais del resto de sudamerica"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                        }
-                    }
-
+                    break;
                 }
-                else if (peso > 10M)
+
+
+                //DETERMINACIÓN DE LOCALIDAD Y PROVINCIA DE ORIGEN
+                string localidadOrigen = "";
+                string provinciaOrigen = "";
+                while (true)
                 {
-                    if (paisOrigen == paisDestino)
+                    Console.WriteLine("Ingrese la localidad de origen de la dirección: ");
+                    foreach (Localidad localidad in Localidad.LocalidadList) //Muestra todas las localidades del maestro de localidades. Las mismas son solo de Argentina.
                     {
-                        if (regionOrigen == regionDestino)
+                        Console.WriteLine(localidad.NroLocalidad + " - " + localidad.NombreLocalidad + " (" + localidad.ProvinciaLocalidad + ")");
+                    }
+                    string ingresolocalidadOrigen = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(ingresolocalidadOrigen))
+                    {
+                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 48.");
+                        continue;
+                    }
+                    if (!int.TryParse(ingresolocalidadOrigen, out int intlocalidadOrigen))
+                    {
+                        Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 48.");
+                        continue;
+                    }
+                    if (intlocalidadOrigen < 1 || intlocalidadOrigen > 48)
+                    {
+                        Console.WriteLine("Usted debe ingresar un número entero del 1 al 48.");
+                        continue;
+                    }
+                    foreach (Localidad localidad in Localidad.LocalidadList)
+                    {
+                        if (intlocalidadOrigen == localidad.NroLocalidad) //en base al numero de localidad elegido, establece la localidadOrigen y la provinciaOrigen de la misma
                         {
-                            if (provinciaOrigen == provinciaDestino)
-                            {
-                                if (localidadOrigen == localidadDestino)
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "20kglocalidad") //Coloca tarifa "Hasta 20 Kg para misma localidad"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "20kgprovincia") //Coloca tarifa "Hasta 20 Kg para misma provincia"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                {
-                                    if (tarifa.Nombre == "20kgregional") //Coloca tarifa "Hasta 20 Kg para misma región"
-                                    {
-                                        costosubtotal = tarifa.Precio;
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            foreach (Tarifas tarifa in Tarifas.TarifasList)
-                            {
-                                if (tarifa.Nombre == "20kgnacional") //Coloca tarifa "Hasta 20 Kg para mismo país"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
+                            localidadOrigen = localidad.NombreLocalidad;
+                            provinciaOrigen = localidad.ProvinciaLocalidad;
                         }
 
                     }
-                    else
-                    {
-                        foreach (Tarifas tarifa in Tarifas.TarifasList)
-                        {
-                            if (paisDestino == "BRASIL" || paisDestino == "URUGUAY" || paisDestino == "BOLIVIA" || paisDestino == "CHILE" || paisDestino == "PARAGUAY")
-                            {
-                                if (tarifa.Nombre == "20kgpaislimitrofe") //Coloca tarifa "Hasta 20 Kg para país limitrofe"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                            if (paisDestino == "COLOMBIA" || paisDestino == "PERU" || paisDestino == "ECUADOR" || paisDestino == "VENEZUELA" || paisDestino == "GUYANA" || paisDestino == "SURINAM" || paisDestino == "TRINIDAD Y TOBAGO" || paisDestino == "GUAYANA FRANCESA")
-                            {
-                                if (tarifa.Nombre == "20kgpaissudamerica") //Coloca tarifa "Hasta 20 Kg para país del resto de sudamerica"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                        }
-                    }
+                    break;
                 }
-                else if (peso > 0.5M)
+
+
+                //DETERMINACIÓN DE REGIÓN Y PAÍS DE ORIGEN
+                string regionOrigen = "";
+                string paisOrigen = "";
+                foreach (Provincia provincia in Provincia.ProvinciaList)
                 {
-                    if (paisOrigen == paisDestino)
+                    if (provinciaOrigen == provincia.NombreProvincia) //Filtra por la provincia establecida anteriormente y establece su región y país correspondiente
                     {
-                        if (regionOrigen == regionDestino)
-                        {
-                            if (provinciaOrigen == provinciaDestino)
-                            {
-                                if (localidadOrigen == localidadDestino)
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "10kglocalidad") //Coloca tarifa "Hasta 10 Kg para misma localidad"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "10kgprovincia") //Coloca tarifa "Hasta 10 Kg para misma provincia"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                {
-                                    if (tarifa.Nombre == "10kgregional") //Coloca tarifa "Hasta 10 Kg para misma región"
-                                    {
-                                        costosubtotal = tarifa.Precio;
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            foreach (Tarifas tarifa in Tarifas.TarifasList)
-                            {
-                                if (tarifa.Nombre == "10kgnacional") //Coloca tarifa "Hasta 10 Kg para mismo país"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-                        }
+                        regionOrigen = provincia.RegionProvincia;
+                        paisOrigen = provincia.PaisProvincia;
 
-                    }
-                    else
-                    {
-                        foreach (Tarifas tarifa in Tarifas.TarifasList)
-                        {
-                            if (paisDestino == "BRASIL" || paisDestino == "URUGUAY" || paisDestino == "BOLIVIA" || paisDestino == "CHILE" || paisDestino == "PARAGUAY")
-                            {
-                                if (tarifa.Nombre == "10kgpaislimitrofe") //Coloca tarifa "Hasta 10 Kg para país limitrofe"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                            if (paisDestino == "COLOMBIA" || paisDestino == "PERU" || paisDestino == "ECUADOR" || paisDestino == "VENEZUELA" || paisDestino == "GUYANA" || paisDestino == "SURINAM" || paisDestino == "TRINIDAD Y TOBAGO" || paisDestino == "GUAYANA FRANCESA")
-                            {
-                                if (tarifa.Nombre == "10kgpaissudamerica") //Coloca tarifa "Hasta 10 Kg para país del resto de sudamerica"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                        }
-                    }
-                }
-                else
-                {
-                    if (paisOrigen == paisDestino)
-                    {
-                        if (regionOrigen == regionDestino)
-                        {
-                            if (provinciaOrigen == provinciaDestino)
-                            {
-                                if (localidadOrigen == localidadDestino)
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "0.5kglocalidad") //Coloca tarifa "Hasta 0.5 Kg para misma localidad"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                    {
-                                        if (tarifa.Nombre == "0.5kgprovincia") //Coloca tarifa "Hasta 0.5 Kg para misma provincia"
-                                        {
-                                            costosubtotal = tarifa.Precio;
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                foreach (Tarifas tarifa in Tarifas.TarifasList)
-                                {
-                                    if (tarifa.Nombre == "0.5kgregional") //Coloca tarifa "Hasta 0.5 Kg para misma región"
-                                    {
-                                        costosubtotal = tarifa.Precio;
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            foreach (Tarifas tarifa in Tarifas.TarifasList)
-                            {
-                                if (tarifa.Nombre == "0.5kgnacional") //Coloca tarifa "Hasta 0.5 Kg para mismo país"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-                        }
-
-                    }
-                    else
-                    {
-                        foreach (Tarifas tarifa in Tarifas.TarifasList)
-                        {
-                            if (paisDestino == "BRASIL" || paisDestino == "URUGUAY" || paisDestino == "BOLIVIA" || paisDestino == "CHILE" || paisDestino == "PARAGUAY")
-                            {
-                                if (tarifa.Nombre == "0.5kgpaislimitrofe") //Coloca tarifa "Hasta 0.5 Kg para país limitrofe"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                            if (paisDestino == "COLOMBIA" || paisDestino == "PERU" || paisDestino == "ECUADOR" || paisDestino == "VENEZUELA" || paisDestino == "GUYANA" || paisDestino == "SURINAM" || paisDestino == "TRINIDAD Y TOBAGO" || paisDestino == "GUAYANA FRANCESA")
-                            {
-                                if (tarifa.Nombre == "0.5kgpaissudamerica") //Coloca tarifa "Hasta 0.5 Kg para país del resto de sudamerica"
-                                {
-                                    costosubtotal = tarifa.Precio;
-                                }
-                            }
-
-                        }
                     }
                 }
 
 
-                //CALCULO COSTO FINAL POR SERVICIOS ADICIONALES
-                decimal costofinal = 0M;
+                //LOOPS INGRESO DATOS DE DESTINO
+                //DETERMINACIÓN DEL PAÍS DE DESTINO
+                string paisDestino = "";
+                string regionpaisDestino = "";
+                while (true)
+                {
+                    Console.WriteLine("Ingrese el país de destino de la dirección: ");
+                    foreach (Pais pais in Pais.PaisList) //Muestra todos los paises del maestro de paises.
+                    {
+                        Console.WriteLine(pais.NroPais + " - " + pais.NombrePais);
+                    }
+                    string ingresopaisDestino = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(ingresopaisDestino))
+                    {
+                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 11.");
+                        continue;
+                    }
+                    if (!int.TryParse(ingresopaisDestino, out int intpaisDestino))
+                    {
+                        Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 11.");
+                        continue;
+                    }
+                    if (intpaisDestino < 1 || intpaisDestino > 11)
+                    {
+                        Console.WriteLine("Usted debe ingresar un número entero del 1 al 11.");
+                        continue;
+                    }
+                    foreach (Pais pais in Pais.PaisList)
+                    {
+                        if (intpaisDestino == pais.NroPais) //en base al numero de país elegido, establece el paisDestino y la regionpaisDestino del mismo (seria la región internacional)
+                        {
+                            paisDestino = pais.NombrePais;
+                            regionpaisDestino = pais.RegionPais;
+                        }
+
+                    }
+                    break;
+                }
+
+
+                //DETERMINACIÓN DE DIRECCIÓN DE DESTINO
+                string direccionDestino = "";
+                while (true)
+                {
+                    Console.WriteLine("Ingrese la dirección de destino (Calle, número y código postal): ");
+                    direccionDestino = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(direccionDestino))
+                    {
+                        Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar una dirección de destino.");
+                        continue;
+                    }
+                    break;
+                }
+
+
+                //DETERMINACIÓN DE LOCALIDAD DE DESTINO (SOLO SI EL PAÍS ES ARGENTINA) Y PROVINCIA DE DESTINO
+                string localidadDestino = "";
+                string provinciaDestino = "";
+                List<int> provinciasPaisList = new List<int>();
+                if (paisDestino == "ARGENTINA") //SI EL PAÍS ES ARGENTINA, SOLICITA ELEGIR UNA LOCALIDAD Y EN BASE A LA MISMA ESTABLECE LA PROVINCIA CORRESPONDIENTE
+                {
+                    while (true)
+                    {
+                        Console.WriteLine("Ingrese la localidad de destino de la dirección: ");
+                        foreach (Localidad localidad in Localidad.LocalidadList)
+                        {
+                            Console.WriteLine(localidad.NroLocalidad + " - " + localidad.NombreLocalidad + " (" + localidad.ProvinciaLocalidad + ")");
+                        }
+                        string ingresolocalidadDestino = Console.ReadLine();
+                        if (string.IsNullOrWhiteSpace(ingresolocalidadDestino))
+                        {
+                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del 1 al 48.");
+                            continue;
+                        }
+                        if (!int.TryParse(ingresolocalidadDestino, out int intlocalidadDestino))
+                        {
+                            Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del 1 al 48.");
+                            continue;
+                        }
+                        if (intlocalidadDestino < 1 || intlocalidadDestino > 48)
+                        {
+                            Console.WriteLine("Usted debe ingresar un número entero del 1 al 48.");
+                            continue;
+                        }
+                        foreach (Localidad localidad in Localidad.LocalidadList)
+                        {
+                            if (intlocalidadDestino == localidad.NroLocalidad)
+                            {
+                                localidadDestino = localidad.NombreLocalidad;
+                                provinciaDestino = localidad.ProvinciaLocalidad;
+                            }
+
+                        }
+                        break;
+                    }
+                }
+                else //SI EL PAIS NO ES "ARGENTINA", SE SOLICITA ELEGIR SOLO LA PROVINCIA DE DICHO PAÍS
+                {
+                    
+                    while (true)
+                    {
+                        Console.WriteLine("Ingrese la provincia de destino de la dirección: ");
+                        foreach (Provincia provincia in Provincia.ProvinciaList)
+                        {
+                            if (paisDestino == provincia.PaisProvincia) //Filtra las provincias a mostrar en base al paisDestino seleccionado previamente
+                            {
+                                Console.WriteLine(provincia.NroProvincia + " - " + provincia.NombreProvincia);
+
+                                provinciasPaisList.Add(provincia.NroProvincia); //almacena el numero de las provincias del pais, para ser usado en los mensajes de error al ingresar una opción
+                            }
+
+                        }
+                        string ingresoprovinciaDestino = Console.ReadLine();
+                        if (string.IsNullOrWhiteSpace(ingresoprovinciaDestino))
+                        {
+                            Console.WriteLine("Los espacíos en blanco son inválidos. Usted debe ingresar un número entero del " + provinciasPaisList[0] + " al " + provinciasPaisList.Last() + ".");
+                            continue;
+                        }
+                        if (!int.TryParse(ingresoprovinciaDestino, out int intprovinciaDestino))
+                        {
+                            Console.WriteLine("El valor ingresado es inválido. Usted debe ingresar un número entero del " + provinciasPaisList[0] + " al " + provinciasPaisList.Last() + ".");
+                            continue;
+                        }
+                        if (intprovinciaDestino < provinciasPaisList[0] || intprovinciaDestino > provinciasPaisList.Last())
+                        {
+                            Console.WriteLine("Usted debe ingresar un número entero del " + provinciasPaisList[0] + " al " + provinciasPaisList.Last() + ".");
+                            continue;
+                        }
+                        foreach (Provincia provincia in Provincia.ProvinciaList)
+                        {
+                            if (intprovinciaDestino == provincia.NroProvincia)  //Si el numero ingresado correspende a una de las provincis del país, establece finalmente la provinciaDestino
+                            {
+                                provinciaDestino = provincia.NombreProvincia;
+                            }
+
+                        }
+                        localidadDestino = "N/A"; //Al ser un destino internacional no se pide la localidad y se establece ese valor. Esto de acuerdo a la instrucción del correo con las devoluciones donde dice "y sólo si el usuario elije Argentina pedir la localidad."
+                        break;
+                    }
+                }
+
+
+                //DETERMINACIÓN DE REGIÓN DE DESTINO
+                string regionDestino = "";
+                foreach (Provincia provincia in Provincia.ProvinciaList)
+                {
+                    if (provinciaDestino == provincia.NombreProvincia) //Filtra por la provincia establecida anteriormente y establece su región correspondiente
+                    {
+                        regionDestino = provincia.RegionProvincia;
+
+                    }
+                }
+
+
+                //DETERMINACIÓN DE TARIFA
+                LeerTarifas.Iniciar(); //Se inicia la funcion de lectura del maestro de tarifas
+                Tarifas tarifaAUtilizar = null;
+                foreach (Tarifas tarifa in Tarifas.TarifasList)
+                {
+                    if (peso > tarifa.RangoMayorA) //Filtra las tarifas del txt en base al peso ingresado
+                    {
+
+                        if (localidadOrigen == localidadDestino)
+                        {
+                            if (tarifa.TipoTarifa == "localidad")
+                            {
+                                tarifaAUtilizar = tarifa;
+                            }
+
+                        }
+                        else if (provinciaOrigen == provinciaDestino)
+                        {
+                            if (tarifa.TipoTarifa == "provincial")
+                            {
+                                tarifaAUtilizar = tarifa;
+                            }
+                        }
+                        else if (regionOrigen == regionDestino)
+                        {
+                            if (tarifa.TipoTarifa == "regional")
+                            {
+                                tarifaAUtilizar = tarifa;
+                            }
+                        }
+                        else if (paisOrigen == paisDestino) //ES DECIR: SI EL PAIS DESTINO ES "ARGENTINA". YA QUE EL PAISORIGEN ESTA ESTABLECIDO PARA QUE SIEMPRE SEA "ARGENTINA"
+                        {
+                            if (tarifa.TipoTarifa == "nacional")
+                            {
+                                tarifaAUtilizar = tarifa;
+                            }
+                        }
+                        else
+                        {   //PARA LOS ENVIOS INTERNACIONALES, PRIMERO CALCULA LA TARIFA DESDE EL ORIGEN HASTA CABA
+                            if (localidadOrigen == "Villa Devoto" || localidadOrigen == "Recoleta") //Si la localidad de origen coincide con alguna de las 2 localidades de CABA, coloca la tarifa localidad
+                            {
+                                if (tarifa.TipoTarifa == "localidad")
+                                {
+                                    tarifaAUtilizar = tarifa;
+                                }
+
+                            }
+                            else if (provinciaOrigen == "CABA") //Sino, si la provincia de origen coincide con CABA, coloca la tarifa provincial
+                            {
+                                if (tarifa.TipoTarifa == "provincial")
+                                {
+                                    tarifaAUtilizar = tarifa;
+                                }
+                            }
+                            else if (regionOrigen == "METROPOLITANA") //Sino, si la región de origen coincide con la región de CABA (METROPOLITANA), coloca la tarifa regional
+                            {
+                                if (tarifa.TipoTarifa == "regional")
+                                {
+                                    tarifaAUtilizar = tarifa;
+                                }
+                            }
+                            else if (paisOrigen == "ARGENTINA") //Sino, coloca la tarifa nacional
+                            {
+                                if (tarifa.TipoTarifa == "nacional")
+                                {
+                                    tarifaAUtilizar = tarifa;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+
+
+                //DETERMINACIÓN DE TARIFA INTERNACIONAL
+                TarifasInternacionales tarifaIntAUtilizar = null;
+                if (paisDestino != "ARGENTINA")
+                {
+                    LeerTarifasInternacionales.Iniciar();//Se inicia la funcion de lectura del maestro de tarifas internacionales
+                    foreach (TarifasInternacionales tarifaInternacional in TarifasInternacionales.TarifasInternacionalesList)
+                    {
+                        if (peso > tarifaInternacional.RangoMayorA) //Filtra las tarifas internacionales del txt en base al peso ingresado
+                        {
+                            if (regionpaisDestino == tarifaInternacional.RegionInternacional) //Filtra las tarifas internacionales en base a la región internacional del país de destino seleccionado previamente.
+                            {
+                                tarifaIntAUtilizar = tarifaInternacional;
+                            }
+                        }
+                    }
+                }
+
+
+                //DETERMINACIÓN TARIFAS ADICIONALES
+                decimal tarifaUrgente = 0M;
+                decimal tarifaEntregaPuerta = 0M;
+                decimal tarifaRetiroPuerta = 0M;
                 LeerTarifasAdicionales.Iniciar();
 
-                costofinal = costosubtotal;
 
                 if (urgente == "SI")
                 {
                     foreach (TarifasAdicionales tarifaAdicional in TarifasAdicionales.TarifasAdicionalesList)
                     {
-                        if (tarifaAdicional.Nombre == "urgente")
+                        if (tarifaAdicional.Nombre == "urgente") //Busca la tarifa adicional por recargo urgente porcentual y la calcula
                         {
-                            costofinal = costofinal + costofinal * tarifaAdicional.Porcentaje;
+                            tarifaUrgente = tarifaAUtilizar.Precio * tarifaAdicional.Porcentaje;
                         }
                     }
 
@@ -1079,9 +585,9 @@ namespace AppClientesCorporativos_GrupoH
                 {
                     foreach (TarifasAdicionales tarifaAdicional in TarifasAdicionales.TarifasAdicionalesList)
                     {
-                        if (tarifaAdicional.Nombre == "entregapuerta")
+                        if (tarifaAdicional.Nombre == "entregapuerta") //Busca la tarifa adicional por recargo de entrega en puerta
                         {
-                            costofinal = costofinal + tarifaAdicional.Precio;
+                            tarifaEntregaPuerta = tarifaAdicional.Precio;
                         }
                     }
 
@@ -1092,11 +598,19 @@ namespace AppClientesCorporativos_GrupoH
                 {
                     foreach (TarifasAdicionales tarifaAdicional in TarifasAdicionales.TarifasAdicionalesList)
                     {
-                        if (tarifaAdicional.Nombre == "retiropuerta")
+                        if (tarifaAdicional.Nombre == "retiropuerta") //Busca la tarifa adicional por recargo de entrega en puerta
                         {
-                            costofinal = costofinal + tarifaAdicional.Precio;
+                            tarifaRetiroPuerta = tarifaAdicional.Precio;
                         }
                     }
+                }
+
+
+                //DETERMINACIÓN COSTO FINAL DE LA SOLICITUD
+                decimal costo = tarifaAUtilizar.Precio + tarifaUrgente + tarifaEntregaPuerta + tarifaRetiroPuerta;
+                if (paisDestino != "ARGENTINA")
+                {
+                    costo = costo + tarifaIntAUtilizar.Precio;
                 }
 
                 //MUESTRA TODOS LOS DATOS QUE VA A TENER LA SOLICITUD Y EL COSTO FINAL
@@ -1106,9 +620,29 @@ namespace AppClientesCorporativos_GrupoH
                 Console.WriteLine("NroSolicitud: " + nrosolicitud + "; Fecha: " + fecha + "; Cliente: " + cliente + "; Estado: " + estado + "; TipoSolicitud: " + tipoSolicitud + "; DirecciónOrigen: " + direccionOrigen + "; LocalidadOrigen: " + localidadOrigen
                 + "; ProvinciaOrigen: " + provinciaOrigen + "; RegiónOrigen: " + regionOrigen + "; PaísOrigen: " + paisOrigen + "; DirecciónDestino: " + direccionDestino + "; LocalidadDestino: " + localidadDestino
                 + "; ProvinciaDestino: " + provinciaDestino + "; RegiónDestino: " + regionDestino + "; PaísDestino: " + paisDestino + "; Peso(Kg): " + peso + "; Urgente: " + urgente + "; Entrega: " + entrega
-                + "; Retiro: " + retiro + "; Costo: " + costofinal);
+                + "; Retiro: " + retiro + "; Costo: " + costo);
 
-                Console.WriteLine($"El costo de su solicitud es: {costofinal}");
+
+                Console.WriteLine();//deja un espacio
+                Console.WriteLine("Tarifa Argentina|" + tarifaAUtilizar.Nombre + ": $" + tarifaAUtilizar.Precio);
+                if (paisDestino != "ARGENTINA")
+                {
+                    Console.WriteLine("Tarifa Internacional|" + tarifaIntAUtilizar.Nombre + ": $" + tarifaIntAUtilizar.Precio);
+                }
+                if (urgente == "SI")
+                {
+                    Console.WriteLine("Recargo urgente (25% sobre tarifa argentina): $" + tarifaUrgente);
+                }
+                if (entrega == "PUERTA")
+                {
+                    Console.WriteLine("Recargo entrega en puerta: $" + tarifaEntregaPuerta);
+                }
+                if (retiro == "PUERTA")
+                {
+                    Console.WriteLine("Recargo retiro en puerta: $" + tarifaRetiroPuerta);
+                }
+                Console.WriteLine();//deja un espacio
+                Console.WriteLine("El costo total de su solicitud es de: $" + costo);
 
 
 
@@ -1153,7 +687,7 @@ namespace AppClientesCorporativos_GrupoH
                         solicitud.Urgente = urgente;
                         solicitud.Entrega = entrega;
                         solicitud.Retiro = retiro;
-                        solicitud.Costo = costofinal;
+                        solicitud.Costo = costo;
 
                         SolicitudServicio.SolicitudList.Add(solicitud);
                         GrabarSolicitud.Iniciar();
@@ -1183,7 +717,12 @@ namespace AppClientesCorporativos_GrupoH
                 Console.WriteLine("Volviendo al menú principal...");
                 Console.WriteLine("---------------------------------------------");
                 SolicitudServicio.SolicitudList.Clear();
+                Localidad.LocalidadList.Clear();
+                Provincia.ProvinciaList.Clear();
+                Pais.PaisList.Clear();
+                provinciasPaisList.Clear();
                 Tarifas.TarifasList.Clear();
+                TarifasInternacionales.TarifasInternacionalesList.Clear();
                 TarifasAdicionales.TarifasAdicionalesList.Clear();
                 break;
             }

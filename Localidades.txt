@@ -1,0 +1,48 @@
+1;San Martín;Buenos Aires
+2;Bragado;Buenos Aires
+3;Villa Devoto;CABA
+4;Recoleta;CABA
+5;Aconquija;Catamarca
+6;Capayán;Catamarca
+7;Juan José Castelli;Chaco
+8;Charata;Chaco
+9;Comodoro Rivadavia;Chubut
+10;Esquel;Chubut
+11;Bell Ville;Córdoba
+12;Capilla del Monte;Córdoba
+13;Alvear;Corrientes
+14;Concepción;Corrientes
+15;Concordia;Entre Ríos
+16;Gualeguaychu;Entre Ríos
+17;Formosa Capital;Formosa
+18;Herradura;Formosa
+19;Hornillos;Jujuy
+20;La Quiaca;Jujuy
+21;General Pico;La Pampa
+22;Victorica;La Pampa
+23;Anillaco;La Rioja
+24;Villa Castelli;La Rioja
+25;Mendoza Capital;Mendoza
+26;Rivadavia;Mendoza
+27;Puerto Iguazu;Misiones
+28;Leandro Alem;Misiones
+29;Villa La Angostura;Neuquén
+30;Arroyito;Neuquén
+31;El Bolsón;Río Negro
+32;Cipolletti;Río Negro
+33;Cafayate;Salta
+34;Salta Capital;Salta
+35;Las Flores;San Juan
+36;San Juan Capital;San Juan
+37;San Luis Capital;San Luis
+38;Lujan;San Luis
+39;El Calafate;Santa Cruz
+40;El Chalten;Santa Cruz
+41;Arroyo Seco;Santa Fe
+42;Rosario;Santa Fe
+43;La Banda;Santiago del Estero
+44;Pinto;Santiago del Estero
+45;Ushuaia;Tierra del Fuego
+46;Rio Grande;Tierra del Fuego
+47;San Miguel de Tucumán;Tucumán
+48;Tafi del Valle;Tucumán

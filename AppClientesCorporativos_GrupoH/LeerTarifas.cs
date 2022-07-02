@@ -21,7 +21,10 @@ namespace AppClientesCorporativos_GrupoH
 
                 Tarifas tarifa = new Tarifas();
                 tarifa.Nombre = datos[0];
-                tarifa.Precio = decimal.Parse(datos[1], CultureInfo.InvariantCulture);
+                tarifa.TipoTarifa = datos[1];
+                tarifa.RangoMayorA = decimal.Parse(datos[2], CultureInfo.InvariantCulture);
+                tarifa.RangoMenorIgualA = decimal.Parse(datos[3], CultureInfo.InvariantCulture);
+                tarifa.Precio = decimal.Parse(datos[4], CultureInfo.InvariantCulture);
 
                 Tarifas.TarifasList.Add(tarifa);
 

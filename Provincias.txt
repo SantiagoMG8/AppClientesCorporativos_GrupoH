@@ -1,0 +1,44 @@
+1;Buenos Aires;METROPOLITANA;ARGENTINA
+2;CABA;METROPOLITANA;ARGENTINA
+3;Catamarca;NORTE;ARGENTINA
+4;Chaco;NORTE;ARGENTINA
+5;Chubut;SUR;ARGENTINA
+6;Córdoba;CENTRO;ARGENTINA
+7;Corrientes;NORTE;ARGENTINA
+8;Entre Ríos;NORTE;ARGENTINA
+9;Formosa;NORTE;ARGENTINA
+10;Jujuy;NORTE;ARGENTINA
+11;La Pampa;CENTRO;ARGENTINA
+12;La Rioja;NORTE;ARGENTINA
+13;Mendoza;CENTRO;ARGENTINA
+14;Misiones;NORTE;ARGENTINA
+15;Neuquén;SUR;ARGENTINA
+16;Río Negro;SUR;ARGENTINA
+17;Salta;NORTE;ARGENTINA
+18;San Juan;NORTE;ARGENTINA
+19;San Luis;CENTRO;ARGENTINA
+20;Santa Cruz;SUR;ARGENTINA
+21;Santa Fe;CENTRO;ARGENTINA
+22;Santiago del Estero;NORTE;ARGENTINA
+23;Tierra del Fuego;SUR;ARGENTINA
+24;Tucumán;NORTE;ARGENTINA
+25;São Paulo;Região Sudeste;BRASIL
+26;Distrito Federal;Região Centro-Oeste;BRASIL
+27;Montevideo;Región Metropolitana;URUGUAY
+28;Salto;Región Litoral Norte;URUGUAY
+29;Cundinamarca;Región Andina;COLOMBIA
+30;Tolima;Región Andina;COLOMBIA
+31;Lima;La Costa;PERÚ
+32;Arequipa;La Sierra Sur;PERÚ
+33;California;Oeste Pacífico;ESTADOS UNIDOS
+34;Texas;Centro Suroeste;ESTADOS UNIDOS
+35;Quebec;Centro de Canadá;CANADÁ
+36;Columbia Británica;Costa Oeste;CANADÁ
+37;Barcelona;Cataluña;ESPAÑA
+38;Málaga;Andalucía;ESPAÑA
+39;Roma;Lazio;ITALIA
+40;Milán;Lombardia;ITALIA
+41;Guangdong;China Central Meridional;CHINA
+42;Jilin;China del Nordeste;CHINA
+43;Tokio;Región de Kanto;JAPÓN
+44;Osaka;Región de Kinki;JAPÓN
